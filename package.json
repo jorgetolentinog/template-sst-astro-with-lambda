@@ -1,0 +1,12 @@
+{
+  "name": "sst-demo",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "sst dev",
+    "deploy":  "sst deploy",
+    "remove":  "sst remove"
+  },
+  "devDependencies": {
+    "sst": "^3.0.132"
+  }
+}

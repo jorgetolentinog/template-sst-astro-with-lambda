@@ -1,0 +1,23 @@
+{
+	"name": "node",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "dev",
+	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+	"remoteUser": "root",
+	"postCreateCommand": "bash /workspaces/${localWorkspaceFolderBasename}/.devcontainer/setup.sh",
+	"shutdownAction": "stopCompose",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"astro-build.astro-vscode",
+				"esbenp.prettier-vscode",
+				"bradlc.vscode-tailwindcss",
+				"ms-vsliveshare.vsliveshare",
+				"ms-azuretools.vscode-docker"
+			],
+			"settings": {
+				"editor.tabSize": 4
+			}
+		}
+	}
+}

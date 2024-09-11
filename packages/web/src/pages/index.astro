@@ -1,0 +1,11 @@
+---
+import { TestComponent } from '../components/test';
+import Layout from '../layouts/Layout.astro';
+
+export const prerender = true;
+---
+
+<Layout title="Welcome">
+	<pre>{new Date()}</pre>
+	<TestComponent client:idle />
+</Layout>

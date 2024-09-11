@@ -1,0 +1,10 @@
+# all
+.*
+*.log*
+dist
+node_modules
+coverage
+
+# except
+!.gitignore
+!.devcontainer

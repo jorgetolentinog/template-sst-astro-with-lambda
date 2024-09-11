@@ -1,0 +1,22 @@
+export ZSH=$HOME/.oh-my-zsh
+
+ZSH_THEME="devcontainers"
+
+plugins=(
+    git
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+)
+
+source $ZSH/oh-my-zsh.sh
+
+DISABLE_AUTO_UPDATE=true
+DISABLE_UPDATE_PROMPT=true
+
+function node_prompt_version {
+    if which node &> /dev/null; then
+        echo "%{$fg_bold[blue]%}node(%{$fg[red]%}$(node -v)%{$fg[blue]%}) %{$reset_color%}"
+    fi
+}
+
+RPROMPT="$(node_prompt_version)"
